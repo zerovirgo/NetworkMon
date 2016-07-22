@@ -68,7 +68,7 @@ logList = [
 'SouthRoute_AMS_CHI_AmsMLXe4.log' ,
 'SouthRoute_CHI_AMS_ChiMLXe4.log' ,
 'SouthRoute_CHI_TPE_ChiMLXe4.log' ,
-'SouthRoute_TPE_CHI_TpeMLXe4.log'
+'SouthRoute_TPE_CHI_TpeMLXe8.log'
 ]
 for logName in logList:
     getCSV(logName)
