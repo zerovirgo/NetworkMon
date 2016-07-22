@@ -1,0 +1,57 @@
+Feb  5 10:10:09 117.103.111.241 System: Interface ethernet 1/1, state up 
+Feb  5 10:14:38 117.103.111.241 System: Interface ethernet 1/1, state down - link down 
+Feb  5 11:22:00 117.103.111.241 System: Interface ethernet 1/1, state up 
+Feb  5 17:36:37 117.103.111.241 System: Interface ethernet 1/1, state down - link down 
+Feb  5 17:38:01 117.103.111.241 System: Interface ethernet 1/1, state up 
+Feb  5 17:41:23 117.103.111.241 System: Interface ethernet 1/1, state down - link down 
+Feb  5 17:43:22 117.103.111.241 System: Interface ethernet 1/1, state up 
+Feb  5 17:43:39 117.103.111.241 System: Interface ethernet 1/1, state down - link down 
+Feb  5 17:43:49 117.103.111.241 System: Interface ethernet 1/1, state up 
+Feb  5 20:04:42 117.103.111.241 System: Interface ethernet 1/1, state down - link down 
+Feb  5 20:05:52 117.103.111.241 System: Interface ethernet 1/1, state up 
+Feb  5 22:04:34 117.103.111.241 System: Interface ethernet 1/1, state up 
+Feb 23 08:46:43 117.103.111.241 System: Interface ethernet 1/1, state down - link down 
+Feb 23 09:13:38 117.103.111.241 System: Interface ethernet 1/1, state up 
+Mar  1 17:39:21 117.103.111.241 SYSTEM: port 1/1 is down( local fault 1)   
+Mar  1 17:39:21 117.103.111.241 System: Interface ethernet 1/1, state down - local fault 
+Mar  1 17:44:59 117.103.111.241 System: Interface ethernet 1/1, state up 
+Mar  1 17:50:11 117.103.111.241 System: Interface ethernet 1/1, state down - lacp block 
+Mar  1 17:50:13 117.103.111.241 System: Interface ethernet 1/1, state up 
+Mar  1 17:58:47 117.103.111.241 System: Interface ethernet 1/1, state down - link down 
+Mar  1 17:59:22 117.103.111.241 System: Interface ethernet 1/1, state up 
+Mar  1 17:59:32 117.103.111.241 System: Interface ethernet 1/1, state down - link down 
+Mar  1 17:59:59 117.103.111.241 System: Interface ethernet 1/1, state up 
+Apr  7 12:09:18 117.103.111.241 System: Interface ethernet 1/1, state up 
+Apr  7 14:20:15 117.103.111.241 System: Interface ethernet 1/1, state up 
+Apr  7 14:21:51 117.103.111.241 System: Interface ethernet 1/1, state down - disabled 
+Apr  7 14:21:53 117.103.111.241 System: Interface ethernet 1/1, state up 
+Apr 14 10:56:29 117.103.111.241 System: Interface ethernet 1/1, state up 
+Apr 19 05:58:42 117.103.111.241 System: Interface ethernet 1/1, state up 
+May  6 09:29:53 117.103.111.241 System: Interface ethernet 1/1, state up 
+May  6 09:30:08 117.103.111.241 System: Interface ethernet 1/1, state down - link down 
+May  6 09:48:45 117.103.111.241 System: Interface ethernet 1/1, state up 
+May  6 09:48:45 117.103.111.241 SYSTEM: port 1/1 is down( local fault 1)   
+May  6 09:48:45 117.103.111.241 System: Interface ethernet 1/1, state down - local fault 
+May  6 09:48:45 117.103.111.241 SYSTEM: port 1/1 link fault status is cleared(physical link goes down 24)   
+May  6 09:58:46 117.103.111.241 System: Interface ethernet 1/1, state up 
+May  6 09:58:46 117.103.111.241 SYSTEM: port 1/1 is down( local fault 1)   
+May  6 09:58:46 117.103.111.241 System: Interface ethernet 1/1, state down - local fault 
+May  6 09:58:46 117.103.111.241 SYSTEM: port 1/1 link fault status is cleared(physical link goes down 24)   
+May  6 09:58:47 117.103.111.241 System: Interface ethernet 1/1, state up 
+May  6 10:12:37 117.103.111.241 System: Interface ethernet 1/1, state up 
+May  6 10:59:42 117.103.111.241 System: Interface ethernet 1/1, state up 
+May  6 10:59:59 117.103.111.241 System: Interface ethernet 1/1, state down - disabled 
+May  6 11:00:03 117.103.111.241 System: Interface ethernet 1/1, state up 
+May 10 13:27:29 117.103.111.241 System: Interface ethernet 1/1, state up 
+May 10 13:38:06 117.103.111.241 System: Interface ethernet 1/1, state up 
+May 10 13:40:39 117.103.111.241 System: Interface ethernet 1/1, state up 
+May 10 13:47:29 117.103.111.241 System: Interface ethernet 1/1, state up 
+May 14 12:06:52 117.103.111.241 System: Interface ethernet 1/1, state up 
+May 14 12:07:06 117.103.111.241 System: Interface ethernet 1/1, state up 
+May 14 12:07:10 117.103.111.241 System: Interface ethernet 1/1, state down - link down 
+May 14 12:07:20 117.103.111.241 SYSTEM: port 1/1 is down( local fault 1)   
+May 14 12:07:20 117.103.111.241 SYSTEM: port 1/1 link fault status is cleared(physical link goes down 24)   
+May 14 12:07:45 117.103.111.241 System: Interface ethernet 1/1, state up 
+May 14 18:23:56 117.103.111.241 System: Interface ethernet 1/1, state up 
+May 14 18:31:18 117.103.111.241 System: Interface ethernet 1/1, state up 
+Jul  7 12:50:04 117.103.111.241 System: Interface ethernet 1/1, state up 

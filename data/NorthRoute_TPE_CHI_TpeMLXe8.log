@@ -1,0 +1,114 @@
+Mar  2 00:32:11 117.103.111.246 System: Interface ethernet 1/2, state down - link down 
+Mar  2 10:43:49 117.103.111.246 SYSTEM: port 1/2 is down( local fault 1)   
+Mar  2 10:43:49 117.103.111.246 SYSTEM: port 1/2 link fault status is cleared(physical link goes down 24)   
+Mar  2 10:43:50 117.103.111.246 SYSTEM: port 1/2 is down( local fault 1)   
+Mar  2 10:43:52 117.103.111.246 System: Interface ethernet 1/2, state up 
+Mar  2 10:49:01 117.103.111.246 SYSTEM: port 1/2 is down( local fault 1)   
+Mar  2 10:49:01 117.103.111.246 System: Interface ethernet 1/2, state down - local fault 
+Mar  2 10:49:02 117.103.111.246 System: Interface ethernet 1/2, state up 
+Mar  2 10:52:23 117.103.111.246 System: Interface ethernet 1/2, state down - link down 
+Mar  2 10:52:25 117.103.111.246 System: Interface ethernet 1/2, state up 
+Mar  2 10:52:25 117.103.111.246 System: Interface ethernet 1/2, state down - link down 
+Mar  2 10:52:26 117.103.111.246 System: Interface ethernet 1/2, state up 
+Mar  2 10:52:26 117.103.111.246 System: Interface ethernet 1/2, state down - link down 
+Mar  2 10:52:26 117.103.111.246 System: Interface ethernet 1/2, state up 
+Mar  2 10:52:27 117.103.111.246 SYSTEM: port 1/2 is down( local fault 1)   
+Mar  2 10:52:27 117.103.111.246 System: Interface ethernet 1/2, state down - local fault 
+Mar  2 10:52:27 117.103.111.246 System: Interface ethernet 1/2, state up 
+Mar  2 10:52:28 117.103.111.246 System: Interface ethernet 1/2, state down - link down 
+Mar  2 10:52:28 117.103.111.246 System: Interface ethernet 1/2, state up 
+Mar  2 10:52:29 117.103.111.246 SYSTEM: port 1/2 is down( local fault 1)   
+Mar  2 10:52:29 117.103.111.246 System: Interface ethernet 1/2, state down - local fault 
+Mar  2 10:52:29 117.103.111.246 System: Interface ethernet 1/2, state up 
+Mar  2 10:52:30 117.103.111.246 System: Interface ethernet 1/2, state down - link down 
+Mar  2 10:52:31 117.103.111.246 System: Interface ethernet 1/2, state up 
+Mar  2 10:52:31 117.103.111.246 System: Interface ethernet 1/2, state down - link down 
+Mar  2 10:52:32 117.103.111.246 System: Interface ethernet 1/2, state up 
+Mar  2 10:52:33 117.103.111.246 System: Interface ethernet 1/2, state down - link down 
+Mar  2 10:52:33 117.103.111.246 System: Interface ethernet 1/2, state up 
+Mar  2 10:52:34 117.103.111.246 SYSTEM: port 1/2 is down( local fault 1)   
+Mar  2 10:52:34 117.103.111.246 System: Interface ethernet 1/2, state down - local fault 
+Mar  2 10:52:34 117.103.111.246 System: Interface ethernet 1/2, state up 
+Mar  2 10:52:35 117.103.111.246 System: Interface ethernet 1/2, state down - link down 
+Mar  2 10:52:36 117.103.111.246 System: Interface ethernet 1/2, state up 
+Mar  8 10:33:08 117.103.111.246 System: Interface ethernet 1/2, state down - link down 
+Mar  8 10:33:08 117.103.111.246 System: Interface ethernet 1/2, state up 
+Mar  8 17:29:32 117.103.111.246 System: Interface ethernet 1/2, state down - lacp block 
+Mar  8 17:36:15 117.103.111.246 System: Interface ethernet 1/2, state up 
+Mar 10 00:50:39 117.103.111.246 System: Interface ethernet 1/2, state down - link down 
+Mar 10 00:59:53 117.103.111.246 System: Interface ethernet 1/2, state up 
+Mar 25 11:29:38 117.103.111.246 System: Interface ethernet 1/2, state down - disabled 
+Mar 25 11:30:44 117.103.111.246 System: Interface ethernet 1/2, state up 
+Mar 25 15:23:02 117.103.111.246 SYSTEM: port 1/2 is down( local fault 1)   
+Mar 25 15:23:02 117.103.111.246 System: Interface ethernet 1/2, state down - local fault 
+Mar 25 15:33:54 117.103.111.246 System: Interface ethernet 1/2, state up 
+Mar 25 15:34:08 117.103.111.246 System: Interface ethernet 1/2, state down - link down 
+Mar 25 15:34:08 117.103.111.246 System: Interface ethernet 1/2, state up 
+Mar 25 15:56:30 117.103.111.246 System: Interface ethernet 1/2, state down - link down 
+Mar 25 15:56:33 117.103.111.246 System: Interface ethernet 1/2, state up 
+Mar 25 15:56:34 117.103.111.246 System: Interface ethernet 1/2, state down - link down 
+Mar 25 15:56:36 117.103.111.246 System: Interface ethernet 1/2, state up 
+Mar 25 16:54:08 117.103.111.246 System: Interface ethernet 1/2, state down - link down 
+Mar 25 16:54:08 117.103.111.246 System: Interface ethernet 1/2, state up 
+Mar 25 16:54:08 117.103.111.246 System: Interface ethernet 1/2, state down - link down 
+Mar 25 16:54:09 117.103.111.246 System: Interface ethernet 1/2, state up 
+Mar 28 15:10:29 117.103.111.246 System: Interface ethernet 1/2, state down - link down 
+Mar 28 15:10:31 117.103.111.246 System: Interface ethernet 1/2, state up 
+Mar 28 21:25:49 117.103.111.246 System: Interface ethernet 1/2, state down - link down 
+Mar 28 21:25:51 117.103.111.246 System: Interface ethernet 1/2, state up 
+Apr 14 07:41:02 117.103.111.246 System: Interface ethernet 1/2, state down - link down 
+Apr 14 07:43:58 117.103.111.246 System: Interface ethernet 1/2, state up 
+May  3 16:10:19 117.103.111.246 System: Interface ethernet 1/2, state down - disabled 
+May  3 16:11:57 117.103.111.246 System: Interface ethernet 1/2, state up 
+May  5 14:31:58 117.103.111.246 System: Interface ethernet 1/2, state down - link down 
+May  5 14:31:59 117.103.111.246 System: Interface ethernet 1/2, state up 
+May 18 09:43:47 117.103.111.246 System: Interface ethernet 1/2, state down - link down 
+May 18 10:36:19 117.103.111.246 System: Interface ethernet 1/2, state up 
+May 28 09:07:10 117.103.111.246 SYSTEM: port 1/2 is down( local fault 1)   
+May 28 09:07:10 117.103.111.246 System: Interface ethernet 1/2, state down - local fault 
+May 28 09:07:11 117.103.111.246 SYSTEM: port 1/2 is down( local fault 3)   
+May 28 23:37:37 117.103.111.246 System: Interface ethernet 1/2, state up 
+May 29 00:01:26 117.103.111.246 SYSTEM: port 1/2 is down( local fault 1)   
+May 29 00:01:26 117.103.111.246 System: Interface ethernet 1/2, state down - local fault 
+May 29 00:01:26 117.103.111.246 SYSTEM: port 1/2 is down( local fault 3)   
+May 29 01:18:35 117.103.111.246 System: Interface ethernet 1/2, state up 
+May 30 19:53:48 117.103.111.246 System: Interface ethernet 1/2, state down - disabled 
+May 30 19:53:49 117.103.111.246 System: Interface ethernet 1/2, state up 
+May 30 19:55:22 117.103.111.246 System: Interface ethernet 1/2, state down - disabled 
+May 30 19:55:25 117.103.111.246 System: Interface ethernet 1/2, state up 
+Jun  4 15:03:13 117.103.111.246 SYSTEM: port 1/2 is down( local fault 1)   
+Jun  4 15:03:13 117.103.111.246 System: Interface ethernet 1/2, state down - local fault 
+Jun  4 15:03:14 117.103.111.246 SYSTEM: port 1/2 is down( local fault 1)   
+Jun  4 15:17:36 117.103.111.246 SYSTEM: port 1/2 is down( local fault 1)   
+Jun  4 15:17:37 117.103.111.246 System: Interface ethernet 1/2, state up 
+Jun  4 15:17:38 117.103.111.246 SYSTEM: port 1/2 is down( local fault 1)   
+Jun  4 15:17:38 117.103.111.246 System: Interface ethernet 1/2, state down - local fault 
+Jun  4 15:17:38 117.103.111.246 SYSTEM: port 1/2 is down( local fault 1)   
+Jun  4 15:18:53 117.103.111.246 SYSTEM: port 1/2 is down( local fault 1)   
+Jun  4 15:18:55 117.103.111.246 System: Interface ethernet 1/2, state up 
+Jun  4 15:41:50 117.103.111.246 SYSTEM: port 1/2 is down( local fault 1)   
+Jun  4 15:41:50 117.103.111.246 System: Interface ethernet 1/2, state down - local fault 
+Jun  4 15:41:50 117.103.111.246 System: Interface ethernet 1/2, state up 
+Jun  4 16:20:30 117.103.111.246 SYSTEM: port 1/2 is down( local fault 1)   
+Jun  4 16:20:30 117.103.111.246 System: Interface ethernet 1/2, state down - local fault 
+Jun  4 16:20:31 117.103.111.246 System: Interface ethernet 1/2, state up 
+Jun  4 16:20:38 117.103.111.246 SYSTEM: port 1/2 is down( local fault 1)   
+Jun  4 16:20:38 117.103.111.246 System: Interface ethernet 1/2, state down - local fault 
+Jun  4 16:20:39 117.103.111.246 SYSTEM: port 1/2 is down( local fault 1)   
+Jun  4 16:20:40 117.103.111.246 System: Interface ethernet 1/2, state up 
+Jun 28 15:35:56 117.103.111.246 System: Interface ethernet 1/2, state down - link down 
+Jun 28 15:35:57 117.103.111.246 System: Interface ethernet 1/2, state up 
+Jun 28 15:35:58 117.103.111.246 System: Interface ethernet 1/2, state down - link down 
+Jun 28 15:36:01 117.103.111.246 System: Interface ethernet 1/2, state up 
+Jun 30 15:12:58 117.103.111.246 System: Interface ethernet 1/2, state down - lacp block 
+Jun 30 15:13:41 117.103.111.246 System: Interface ethernet 1/2, state up 
+Jul  5 16:46:43 117.103.111.246 SYSTEM: port 1/2 is down( local fault 1)   
+Jul  5 16:46:43 117.103.111.246 System: Interface ethernet 1/2, state down - local fault 
+Jul  5 16:46:43 117.103.111.246 SYSTEM: port 1/2 is down( local fault 1)   
+Jul  5 17:25:22 117.103.111.246 System: Interface ethernet 1/2, state up 
+Jul  7 01:51:16 117.103.111.246 System: Interface ethernet 1/2, state down - link down 
+Jul  7 01:56:29 117.103.111.246 System: Interface ethernet 1/2, state up 
+Jul  9 08:23:48 117.103.111.246 System: Interface ethernet 1/2, state down - link down 
+Jul  9 08:24:17 117.103.111.246 System: Interface ethernet 1/2, state up 
+Jul  9 09:31:16 117.103.111.246 System: Interface ethernet 1/2, state down - link down 
+Jul  9 09:31:43 117.103.111.246 System: Interface ethernet 1/2, state up 
