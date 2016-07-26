@@ -70,5 +70,6 @@ logList = [
 'SouthRoute_CHI_TPE_ChiMLXe4.log' ,
 'SouthRoute_TPE_CHI_TpeMLXe8.log'
 ]
-for logName in logList:
-    getCSV(logName)
+#for logName in logList:
+#    getCSV(logName)
+getCSV('NorthRoute_CHI_TPE_ChiMLXe4.log')

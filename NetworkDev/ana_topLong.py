@@ -13,7 +13,7 @@ csvlist = [
 
 dflist = []
 for i in csvlist:
-    dflist.append( function_df.getDF_netlog(i) )
+    dflist.append( function_df.getDF_netlog(i)  )
 
 newdf = function_df.getDF_netlog_total( dflist ).sort()
 
