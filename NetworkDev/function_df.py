@@ -10,12 +10,15 @@ import pandas as pd
 import numpy as np
 
 #set your dist:
-os.chdir('/home/kschen/anaconda/Projects/NetworkMon/NetworkDev')
+os.chdir(os.getcwd())
 
 def getDF_netlog(fName):
     df = pd.read_csv(fName,index_col='startT',parse_dates=True)
     #df = pd.DataFrame(df, columns=['date_time','startT','endT','route'])
     return df
+
+def getDF_netlog_total(dflist):
+    return pd.concat(dflist)
 
 def dfGroupByDay(df):
     group1 = pd.groupby(df, [df.index.year,df.index.month,df.index.day])
@@ -42,11 +45,12 @@ def dfGroupByWeek(df):
     return buffer0
 
 def getDF_netflow(fName):
-    foldername = 'FlowData'
-    filepath = os.path.join(os.getcwd(),foldername,fName)
+    #foldername = 'FlowData'
+    foldername = os.getcwd()
+    filepath = os.path.join(os.getcwd(),fName)
     if not os.path.exists(filepath):
         print 'File didnot', filepath ,' exist'
-        os.exit()
+        #os.exit()
     df = pd.read_csv(filepath,header=None)
     df.columns = np.array(['date','abstime','input','output'])
     return df
