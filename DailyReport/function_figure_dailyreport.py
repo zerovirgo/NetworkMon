@@ -11,6 +11,10 @@ import time
 import timeModule
 
 
+def markduration(infos):
+    print 'marking',infos
+    plt.text(infos[1],infos[2],'{0}'.format(infos[0]),ha='left',va='bottom',rotation=90,fontsize=10)
+
 def exe(df,bigdf,refTime,filestring,start_sec= 0,end_sec= 0):
     print bigdf.columns
     querystr = 'index > 0'
@@ -22,14 +26,14 @@ def exe(df,bigdf,refTime,filestring,start_sec= 0,end_sec= 0):
     start_sec -= refTime
     end_sec -= refTime
     dicRoute = {
-            'NorthRoute_AMS_CHI_AmsMLXe4' : 'North_AMS2CHI' ,
-            'NorthRoute_CHI_AMS_ChiMLXe4' : 'North_CHI2AMS' ,
-            'NorthRoute_CHI_TPE_ChiMLXe4' : 'North_CHI2TPE' ,
-            'NorthRoute_TPE_CHI_TpeMLXe8' : 'North_TPE2CHI' ,
-            'SouthRoute_AMS_CHI_AmsMLXe4' : 'South_AMS2CHI' ,
-            'SouthRoute_CHI_AMS_ChiMLXe4' : 'South_CHI2AMS' ,
-            'SouthRoute_CHI_TPE_ChiMLXe4' : 'South_CHI2TPE' ,
-            'SouthRoute_TPE_CHI_TpeMLXe8' : 'South_TPE2CHI' }
+            'NorthRoute_AMS_CHI_AmsMLXe4' : 'North_CHI2AmsMLXe4' ,
+            'NorthRoute_CHI_AMS_ChiMLXe4' : 'North_AMS2ChiMLXe4' ,
+            'NorthRoute_CHI_TPE_ChiMLXe4' : 'North_TPE2ChiMLXe4' ,
+            'NorthRoute_TPE_CHI_TpeMLXe8' : 'North_CHI2TpeMLXe8' ,
+            'SouthRoute_AMS_CHI_AmsMLXe4' : 'South_CHI2AmsMLXe4' ,
+            'SouthRoute_CHI_AMS_ChiMLXe4' : 'South_AMS2ChiMLXe4' ,
+            'SouthRoute_CHI_TPE_ChiMLXe4' : 'South_TPE2ChiMLXe4' ,
+            'SouthRoute_TPE_CHI_TpeMLXe8' : 'South_CHI2TpeMLXe8' }
     dicNumb = {
             'NorthRoute_AMS_CHI_AmsMLXe4' : 1 ,
             'NorthRoute_CHI_AMS_ChiMLXe4' : 2 ,
@@ -43,8 +47,18 @@ def exe(df,bigdf,refTime,filestring,start_sec= 0,end_sec= 0):
     #print 'subQ=',subQ
     #subdf = bigdf.query('startT_sec >= {0} and startT_sec < ({1} )'.format(start_sec+refTime,end_sec+refTime))
     subdf = bigdf.query('endT_sec >= {0} and startT_sec < ({1} )'.format(start_sec+refTime,end_sec+refTime))
+    if len(subdf) == 0:
+            print 'nothing to plot'
+            return
     subdf['refTimeStart'] = subdf['startT_sec'] - refTime
     subdf['refTimeEnd']   = subdf['endT_sec'] - refTime
+    #For plot duration label:
+    durationXY = [[subdf['duration'][0],subdf['refTimeStart'][0] , dicNumb[subdf['route'][0]]]]
+    resolution = (end_sec-start_sec)/180. # most have 180 marker
+    for index, row in subdf.query('interval > {0} or interval < 0.0'.format(resolution)).iterrows():
+        durationXY.append([row['duration'],row['refTimeStart'] , dicNumb[row['route']]])
+    #print durationXY
+    #return
 
     subdf['refTimeStart'].astype(np.int64)
     subdf['refTimeEnd'].astype(np.int64)
@@ -90,12 +104,23 @@ def exe(df,bigdf,refTime,filestring,start_sec= 0,end_sec= 0):
         'South_CHI2AmsMLXe4','South_AMS2ChiMLXe4','South_TPE2ChiMLXe4','South_CHI2TpeMLXe8'))
     plt.xlabel('Date:{0}'.format(filestring))
     plt.title(msg)
+    for item in durationXY:
+        plt.text(df['timeIndex'][int(item[1])],item[2],'{0}'.format(item[0]),ha='left',va='bottom',rotation=90,fontsize=10)
+        #markduration(item)
 
     fpath = os.path.join(os.getcwd(),'Flapping{0}.png'.format(filestring+additionstr))
     plt.savefig(fpath)
     plt.clf()
 
     print fpath
+
+    plt.figure(1, figsize=(12,9))
+    subdf.hist(column='duration',by='route')
+    plt.xlabel('Duration (sec)')
+    plt.ylabel('counts')
+    fpath = os.path.join(os.getcwd(),'Flapping{0}_duration_hist.png'.format(filestring+additionstr))
+    plt.savefig(fpath)
+    plt.clf()
     return
     #print df.head(20)
 
