@@ -18,6 +18,8 @@ def exefunc(bigdf):
     flag_continue = False
     groupCounts = 0
     for index, row in bigdf.iterrows():
+        if row['duration'] > 60:
+            group.append([row.startT_sec,row.endT_sec])
         if previous is None:
             print 'empty'
             previous = row
@@ -37,6 +39,7 @@ def exefunc(bigdf):
                 #print row
                 #print 'theend'
                 print 'From' , time.ctime(startG) , 'to' , time.ctime(endG), 'Groups = ' , groupCounts
+                group.append([startG,endG])
                 break
             else:
                 if( row['endT_sec'] - endG) >= 0:
