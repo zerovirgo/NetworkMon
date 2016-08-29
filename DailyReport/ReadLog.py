@@ -13,25 +13,26 @@ def getInfoList(filename):
     else:
         return filename.split('.')[0].split('.')[0].split('_')
 
-def getCSV(filename,route='haha'):
+def getCSV(filename,outputName,port):
     import os
     localdir = os.getcwd()
     fPath = os.path.join(localdir, filename)
-    info = getInfoList(route)
 
     if not os.path.exists(fPath):
         print 'Failed! File' , fPath, 'is not exists!!'
         return
     fin = open(fPath,'r')
-    fout = open('_'.join(info)+'.csv','w')
+    fout = open(outputName,'w')
     flag = False
     fout.writelines('startT,endT,startT_sec,endT_sec,duration,interval,interface,reason,route\n')
     startT,startT_sec,endT,endT_sec,interface,reason,duration,interval = \
     None, None, None, None, None, None, None, None
     lastCheck = 0.0
     for line in fin:
+
+        if not 'System' in line: continue
+        if not port in line: continue
         line = line.strip()
-        if 'SYSTEM' in line: continue
         #print line
         timeLine = line[:15]
         timeLine = '2016 ' + timeLine
@@ -55,7 +56,7 @@ def getCSV(filename,route='haha'):
             duration = endT_sec - startT_sec
             lastCheck = endT_sec
             wline = '{0},{1},{2},{3},{4},{5},{6},{7},{8}\n'.format(startT,endT, \
-            startT_sec,endT_sec,duration,interval,interface,reason,'_'.join(info))
+            startT_sec,endT_sec,duration,interval,interface,reason,outputName.split('.csv')[0])
             fout.writelines(wline)
         else: continue
     fin.close()
@@ -74,6 +75,8 @@ logList = [
 ]
 #for logName in logList:
 #    getCSV(logName)
-
-getCSV('south_route_CHIflapping_{0}_log'.format(timeModule.getYesterday()),'SouthRoute_CHI_TPE_ChiMLXe4.log')
-getCSV('south_route_TPEflapping_{0}_log'.format(timeModule.getYesterday()),'SouthRoute_TPE_CHI_TpeMLXe8.log')
+nDay = -1 
+getCSV('CHIflapping_{0}_log'.format(timeModule.getNday(nDay)),'SouthRoute_CHI_TPE_ChiMLXe4.csv','1/11,')
+getCSV('TPEflapping_{0}_log'.format(timeModule.getNday(nDay)),'SouthRoute_TPE_CHI_TpeMLXe8.csv','2/2,')
+getCSV('CHIflapping_{0}_log'.format(timeModule.getNday(nDay)),'NorthRoute_CHI_TPE_ChiMLXe4.csv','1/1,')
+getCSV('TPEflapping_{0}_log'.format(timeModule.getNday(nDay)),'NorthRoute_TPE_CHI_TpeMLXe8.csv','1/2,')
