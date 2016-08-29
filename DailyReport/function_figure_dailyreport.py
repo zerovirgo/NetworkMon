@@ -2,7 +2,7 @@ import os
 import matplotlib
 matplotlib.use('Agg')
 import sys
-sys.path.append('../../NetworkDev')
+sys.path.append('../NetworkDev')
 import function_df
 import pandas as pd
 import pylab as plt
@@ -28,14 +28,14 @@ def exe(df,bigdf,refTime,filestring,start_sec= 0,end_sec= 0,number = 86400,subZo
     start_sec -= refTime
     end_sec -= refTime
     dicRoute = {
-            'NorthRoute_AMS_CHI_AmsMLXe4' : 'North_CHI2AmsMLXe4' ,
-            'NorthRoute_CHI_AMS_ChiMLXe4' : 'North_AMS2ChiMLXe4' ,
-            'NorthRoute_CHI_TPE_ChiMLXe4' : 'North_TPE2ChiMLXe4' ,
-            'NorthRoute_TPE_CHI_TpeMLXe8' : 'North_CHI2TpeMLXe8' ,
-            'SouthRoute_AMS_CHI_AmsMLXe4' : 'South_CHI2AmsMLXe4' ,
-            'SouthRoute_CHI_AMS_ChiMLXe4' : 'South_AMS2ChiMLXe4' ,
-            'SouthRoute_CHI_TPE_ChiMLXe4' : 'South_TPE2ChiMLXe4' ,
-            'SouthRoute_TPE_CHI_TpeMLXe8' : 'South_CHI2TpeMLXe8' }
+            'NorthRoute_AMS_CHI_AmsMLXe4' : 'North_AmsMLXe4_CHI' ,
+            'NorthRoute_CHI_AMS_ChiMLXe4' : 'North_ChiMLXe4_AMS' ,
+            'NorthRoute_CHI_TPE_ChiMLXe4' : 'North_ChiMLXe4_TPE' ,
+            'NorthRoute_TPE_CHI_TpeMLXe8' : 'North_TpeMLXe8_CHI' ,
+            'SouthRoute_AMS_CHI_AmsMLXe4' : 'South_AmsMLXe4_CHI' ,
+            'SouthRoute_CHI_AMS_ChiMLXe4' : 'South_ChiMLXe4_AMS' ,
+            'SouthRoute_CHI_TPE_ChiMLXe4' : 'South_ChiMLXe4_TPE' ,
+            'SouthRoute_TPE_CHI_TpeMLXe8' : 'South_TpeMLXe8_CHI' }
     dicNumb = {
             'NorthRoute_AMS_CHI_AmsMLXe4' : 1 ,
             'NorthRoute_CHI_AMS_ChiMLXe4' : 2 ,
@@ -55,12 +55,14 @@ def exe(df,bigdf,refTime,filestring,start_sec= 0,end_sec= 0,number = 86400,subZo
     subdf['refTimeStart'] = subdf['startT_sec'] - refTime
     subdf['refTimeEnd']   = subdf['endT_sec'] - refTime
     #For plot duration label:
-    durationXY = [[subdf['duration'][0],subdf['refTimeStart'][0] , dicNumb[subdf['route'][0]]]]
+    durationXY = []
     resolution = (end_sec-start_sec)/180. # most have 180 marker
     for index, row in subdf.query('interval > {0} or interval < 0.0'.format(resolution)).iterrows():
-        durationXY.append([row['duration'],row['refTimeStart'] , dicNumb[row['route']]])
+        if row['refTimeStart'] > 0:
+            durationXY.append([row['duration'],row['refTimeStart'] , dicNumb[row['route']]])
+        else:
+            durationXY.append([row['duration'],row['refTimeEnd'] , dicNumb[row['route']]])
     #print durationXY
-    #return
 
     subdf['refTimeStart'].astype(np.int64)
     subdf['refTimeEnd'].astype(np.int64)
@@ -78,10 +80,8 @@ def exe(df,bigdf,refTime,filestring,start_sec= 0,end_sec= 0,number = 86400,subZo
     ax = plt.axes([0.20,0.05,0.78,0.75])
     print 'ctime = {0}'.format(time.ctime(refTime))
     df['timeIndex'] = pd.date_range(time.ctime(refTime),periods = number, freq='s')
-    timetick0 = pd.date_range(time.ctime(refTime+50+3600), periods = 9 , freq = '3H')
     timetick = pd.date_range(time.ctime(refTime+50), periods = 9 , freq = '3H')
     timeticklabel = []
-    print timetick0
     for item in timetick:
         print item , type(item)
         timeticklabel.append('{0}:{1:0>2d}'.format(item.hour,item.minute))
@@ -142,7 +142,7 @@ def getDays(seconds):
     return 
 def drawDowntimeEventsToday(bigdf):
     yesterday = time.mktime(time.strptime(timeModule.getYesterday(),'%Y%m%d'))
-    yesterday_sec = yesterday +28800.
+    yesterday_sec = yesterday 
     drawDowntimeEvents(bigdf,yesterday_sec,yesterday_sec+86400)
 
 def drawDowntimeEvents(bigdf,start_sec,end_sec):
@@ -180,6 +180,8 @@ def drawDowntimeEvents(bigdf,start_sec,end_sec):
 #'SouthRoute_TPE_CHI_TpeMLXe8.csv'
 #]
 csvlist = [
+'NorthRoute_CHI_TPE_ChiMLXe4.csv' ,
+'NorthRoute_TPE_CHI_TpeMLXe8.csv' ,
 'SouthRoute_CHI_TPE_ChiMLXe4.csv' ,
 'SouthRoute_TPE_CHI_TpeMLXe8.csv'
 ]
