@@ -5,7 +5,7 @@ set NAME2 [lindex $argv 1]
 set PASS [lindex $argv 2]
 set DATE [lindex $argv 3]
 
-set timeout 30
+set timeout 35
 spawn ssh kschen@asgc-ui02.grid.sinica.edu.tw "mkdir -p /asgc_ui_home/kschen/work/DailyFlappingReport/$DATE"
 expect "*?assword:*"
 send "$PASS\r"
