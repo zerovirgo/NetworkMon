@@ -1,0 +1,210 @@
+Aug  2 13:17:09 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 13:37:21 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 13:37:23 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:53:45 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:53:45 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:55:43 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:55:44 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:55:44 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:55:44 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:55:45 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:55:46 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:55:46 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:55:46 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:56:04 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:56:04 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:56:42 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:56:42 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:56:42 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:56:43 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:56:43 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:56:43 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:56:44 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:56:44 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:56:44 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:56:45 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:56:45 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:56:46 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:56:46 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:56:46 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:56:46 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:56:47 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:56:47 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:56:47 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:56:47 117.103.111.242 SYSTEM: port 1/11 is down( local fault 1)   
+Aug  2 14:56:47 117.103.111.242 System: Interface ethernet 1/11, state down - local fault 
+Aug  2 14:56:48 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:56:48 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:56:49 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:56:49 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:56:49 117.103.111.242 SYSTEM: port 1/11 is down( local fault 1)   
+Aug  2 14:56:49 117.103.111.242 SYSTEM: port 1/11 link fault status is cleared(physical link goes down 24)   
+Aug  2 14:56:50 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:56:50 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:56:51 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:56:51 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:56:51 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:56:51 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:56:52 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:56:52 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:56:52 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:56:54 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:56:55 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:56:56 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:56:56 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:57:00 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:57:00 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:57:00 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:57:01 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:57:02 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:57:03 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:57:04 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:57:04 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:57:05 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:57:05 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:57:06 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:57:06 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:57:06 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:57:07 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:57:07 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:57:07 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:57:09 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:57:10 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:57:15 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:57:15 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:57:15 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:57:16 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:57:16 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:57:16 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:57:16 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:57:18 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:57:18 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:57:19 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:57:19 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:57:20 117.103.111.242 SYSTEM: port 1/11 is down( local fault 1)   
+Aug  2 14:57:20 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:57:20 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:57:21 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:57:21 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:57:21 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:57:22 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:57:23 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:57:23 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:57:25 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:57:25 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:57:26 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:57:26 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:57:27 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:57:27 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:57:28 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:57:28 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:57:29 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:57:30 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:57:30 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:57:32 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:57:33 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:57:33 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:57:33 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:57:33 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:57:34 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:57:34 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:57:34 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:57:35 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:57:35 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:57:35 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:57:36 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:57:36 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:57:37 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:57:40 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:57:40 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:57:42 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:57:43 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:57:47 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:57:48 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:57:49 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:57:50 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:57:51 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:57:51 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:57:52 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:57:52 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:57:53 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:57:53 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:57:55 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:57:55 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:58:10 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:58:10 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:58:10 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:58:11 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:58:28 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:58:28 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:58:43 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:58:44 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:58:44 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:58:44 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:58:44 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:58:45 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:58:46 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:58:46 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:58:48 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:58:48 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:58:51 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:58:52 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:58:56 117.103.111.242 SYSTEM: port 1/11 is down( local fault 1)   
+Aug  2 14:58:56 117.103.111.242 System: Interface ethernet 1/11, state down - local fault 
+Aug  2 14:58:57 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:59:08 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:59:08 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:59:11 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:59:12 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:59:12 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:59:12 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:59:12 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:59:13 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:59:15 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:59:15 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:59:17 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:59:17 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:59:18 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:59:18 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:59:18 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:59:19 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:59:19 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:59:19 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:59:21 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:59:22 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:59:26 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:59:26 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:59:29 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:59:29 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:59:30 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:59:31 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:59:31 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:59:32 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:59:35 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:59:35 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:59:36 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:59:37 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:59:38 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:59:39 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:59:40 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:59:40 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:59:40 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:59:41 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:59:41 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:59:42 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:59:43 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:59:43 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:59:46 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:59:46 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:59:47 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:59:47 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:59:50 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:59:50 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 14:59:54 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 14:59:55 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 15:00:02 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 15:00:03 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  2 15:00:04 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  2 15:00:05 117.103.111.242 System: Interface ethernet 1/11, state up 
+Aug  3 07:19:01 117.103.111.242 System: Interface ethernet 1/11, state down - link down 
+Aug  3 07:19:01 117.103.111.242 System: Interface ethernet 1/11, state up 

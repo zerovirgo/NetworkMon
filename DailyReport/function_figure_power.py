@@ -17,6 +17,8 @@ import matplotlib.transforms as transforms
 import matplotlib.dates as mdates
 import matplotlib.patches as mpatches
 import matplotlib.lines as mlines
+from mpl_toolkits.axes_grid1 import host_subplot
+import mpl_toolkits.axisartist as AA
 
 def getDays(seconds):
     import datetime
@@ -42,9 +44,36 @@ def draw2(powerdf,bigdf,route,start_sec = -1,end_sec = -1):
 
     #start to draw
     plt.figure(1, figsize=(12,9))
-    ax = plt.axes([0.20,0.15,0.78,0.75])
-    powerdf['Tx'].plot(kind='line',ax=ax,color='b',legend=True,alpha=0.8,ylim=(-21,3.5))
-    powerdf['Rx'].plot(kind='line',ax=ax,color='r',legend=True,alpha=0.8,ylim=(-21,3.5))
+    host = host_subplot(111, axes_class=AA.Axes)
+    plt.subplots_adjust(right=0.72)
+
+    par1 = host.twinx()
+    par2 = host.twinx()
+    offset = 60
+    new_fixed_axis = par2.get_grid_helper().new_fixed_axis
+    par2.axis['right'] = new_fixed_axis(loc='right',
+                                        axes=par2,
+                                        offset=(offset,0))
+    par2.axis['right'].toggle(all=True)
+    
+    #ax = plt.axes([0.10,0.15,0.78,0.75])
+    p1, = host.plot(powerdf.index,powerdf['Tx'],color='b',alpha=0.8)
+    powerdf['Rx'].plot(kind='line',ax=host,color='r',legend=True,alpha=0.8,ylim=(-21,3.5))
+    # draw temperature
+    p2, = par1.plot(powerdf.index,powerdf['temp'],color = 'purple',alpha=0.7)
+    # draw bias
+    p3, = par2.plot(powerdf.index,powerdf['bias'],color = 'green', alpha =0.7)
+
+    host.set_ylabel('dBm')
+    par1.set_ylabel('temperature $^{\circ}\mathrm{C}$')
+    par2.set_ylabel('bias (mA)')
+
+    host.axis['left'].label.set_color(p1.get_color())
+    par1.axis['right'].label.set_color(p2.get_color())
+    par2.axis['right'].label.set_color(p3.get_color())
+    host.set_ylim(-21,3.5)
+    par1.set_ylim(30,80)
+    par2.set_ylim(30,80)
     # draw threshold
     print 'checkTime (abs)',powerdf['abstime'][-1]
     startdate = datetime.datetime.fromtimestamp(powerdf['abstime'][0])
@@ -63,10 +92,10 @@ def draw2(powerdf,bigdf,route,start_sec = -1,end_sec = -1):
     plt.text(linestart,-7.9997, 'Tx Lower Threshold',color='blue',alpha=0.7)
 
     #draw shadow:
-    rec_bottom = ax.get_ylim()[0]
-    rec_height = ax.get_ylim()[1]
+    rec_bottom = host.get_ylim()[0]
+    rec_height = host.get_ylim()[1]
     trans = transforms.blended_transform_factory(
-                ax.transData, ax.transAxes)
+                host.transData, host.transAxes)
     rects = []
     dictRoute = {
             'NorthRoute_CHI_TPE_ChiMLXe4' : 'North_ChiMLXe4',
@@ -79,7 +108,7 @@ def draw2(powerdf,bigdf,route,start_sec = -1,end_sec = -1):
         end = mdates.date2num(datetime.datetime.fromtimestamp(row['endT_sec']))
         rect =  patches.Rectangle((start,rec_bottom), width=(end-start), height=rec_height+20,
                 color='orange', alpha=0.5)
-        ax.add_patch(rect)
+        host.add_patch(rect)
     orange_patch = mpatches.Patch(color='orange', label='Flapping time')
     blueline = mlines.Line2D([], [], color='blue', label='Tx')
     redline = mlines.Line2D([], [], color='red', label='Rx')
@@ -97,10 +126,11 @@ def draw2(powerdf,bigdf,route,start_sec = -1,end_sec = -1):
     #Plot total
     if (start_sec < 0):
         plt.figure(1, figsize=(12,9))
-        ax = plt.axes([0.20,0.15,0.78,0.75])
+        ax = plt.axes([0.10,0.15,0.78,0.75])
         yButtom = np.minimum(powerdf['Tx'].min(),powerdf['Rx'].min()) - 15
-        powerdf['Tx'].plot(kind='line',ax=ax,color='b',ylim=(yButtom,10))
-        powerdf['Rx'].plot(kind='line',ax=ax,color='r',ylim=(yButtom,10))
+        #powerdf['Tx'].plot(kind='line',ax=ax,color='b',ylim=(yButtom,10))
+        #powerdf['Rx'].plot(kind='line',ax=ax,color='r',ylim=(yButtom,10))
+        powerdf['Rx'].plot(kind='line',ax=ax,color='r')
         # draw threshold
         print 'checkTime (abs)',powerdf['abstime'][-1]
         startdate = datetime.datetime.fromtimestamp(powerdf['abstime'][0])
@@ -110,25 +140,29 @@ def draw2(powerdf,bigdf,route,start_sec = -1,end_sec = -1):
         rec_height = ax.get_ylim()[1]
         linestart = mdates.date2num(datetime.datetime.fromtimestamp(powerdf['abstime'][0]))
         lineend = mdates.date2num(datetime.datetime.fromtimestamp(powerdf['abstime'][-1]))
-        plt.plot([linestart,lineend],[0.5,0.5],'k--',color='red',alpha=0.7)
-        plt.plot([linestart,lineend],[-14.2,-14.2],'k--',color='red',alpha=0.7)
-        plt.plot([linestart,lineend],[-8.2,-8.2],'k--',color='blue',alpha=0.7)
-        plt.text(linestart,0.5,'Rx,Tx Upper Threshold',color='black',alpha=0.7)
-        plt.text(linestart,-14.2,'Rx Lower Threshold',color='red',alpha=0.7)
-        plt.text(linestart,-8.2, 'Tx Lower Threshold',color='blue',alpha=0.7)
-        for index,row in subdf.iterrows():
-            start = mdates.date2num(datetime.datetime.fromtimestamp(row['startT_sec']))
-            end = mdates.date2num(datetime.datetime.fromtimestamp(row['endT_sec']))
-            rect =  patches.Rectangle((start,rec_bottom), width=(end-start), height=rec_height+20,
-                    color='orange', alpha=0.5)
-            ax.add_patch(rect)
-        orange_patch = mpatches.Patch(color='orange', label='Flapping time')
-        blueline = mlines.Line2D([], [], color='blue', label='Tx')
-        redline = mlines.Line2D([], [], color='red', label='Rx')
-        plt.legend(handles=[orange_patch,blueline,redline])
-        plt.ylabel('dBm')
-        plt.xlabel('Date:{0}{1:0>2d}{2:0>2d}'.format(startdate.year,startdate.month,startdate.day))
-        plt.title(dictRoute[route])
+        #plt.plot([linestart,lineend],[0.5,0.5],'k--',color='red',alpha=0.7)
+        #plt.plot([linestart,lineend],[-14.2,-14.2],'k--',color='red',alpha=0.7)
+        #plt.plot([linestart,lineend],[-8.2,-8.2],'k--',color='blue',alpha=0.7)
+        #plt.text(linestart,0.5,'Rx,Tx Upper Threshold',color='black',alpha=0.7)
+        #plt.text(linestart,-14.2,'Rx Lower Threshold',color='red',alpha=0.7)
+        #plt.text(linestart,-8.2, 'Tx Lower Threshold',color='blue',alpha=0.7)
+        #for index,row in subdf.iterrows():
+        #    start = mdates.date2num(datetime.datetime.fromtimestamp(row['startT_sec']))
+        #    end = mdates.date2num(datetime.datetime.fromtimestamp(row['endT_sec']))
+        #    rect =  patches.Rectangle((start,rec_bottom), width=(end-start), height=rec_height+20,
+        #            color='orange', alpha=0.5)
+        #    ax.add_patch(rect)
+        #orange_patch = mpatches.Patch(color='orange', label='Flapping time')
+        #blueline = mlines.Line2D([], [], color='blue', label='Tx')
+        #redline = mlines.Line2D([], [], color='red', label='Rx')
+        # draw temperature :
+        ax2 = ax.twinx()
+        ax2.plot(powerdf.index,powerdf['temp'],color = 'purple')
+        ax2.set_ylabel('temperature',color='purple')
+        #plt.legend(handles=[orange_patch,blueline,redline])
+        #plt.ylabel('dBm')
+        #plt.xlabel('Date:{0}{1:0>2d}{2:0>2d}'.format(startdate.year,startdate.month,startdate.day))
+        #plt.title(dictRoute[route])
         plt.savefig('power_{0}_{1}_fullrange.png'.format(dictRoute[route],timeModule.getYesterday()))
         plt.clf()
 
@@ -156,7 +190,6 @@ pcsvlist = [
 pdf = pd.read_csv('data_North_TWBR2_Optical.csv',index_col='date',parse_dates=True)
 draw2(pdf,newdf,'NorthRoute_TPE_CHI_TpeMLXe8')
 intervals = ana_FlappingBlocks.exefunc(newdf.query('route=="NorthRoute_TPE_CHI_TpeMLXe8"'))
-
 # Draw North_CHIBR0
 pdf = pd.read_csv('data_North_CHIBR0_Optical.csv',index_col='date',parse_dates=True)
 draw2(pdf,newdf,'NorthRoute_CHI_TPE_ChiMLXe4')
@@ -176,4 +209,3 @@ intervals = ana_FlappingBlocks.exefunc(newdf.query('route=="SouthRoute_CHI_TPE_C
 for item in intervals:
     print 'SouthRoute_CHI_TPE_ChiMLXe4' , item[0]-50,item[1]+50
     draw2(pdf,newdf,'SouthRoute_CHI_TPE_ChiMLXe4',item[0]-50,item[1]+50)
-

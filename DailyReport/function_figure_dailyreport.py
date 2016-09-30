@@ -99,8 +99,8 @@ def exe(df,bigdf,refTime,filestring,start_sec= 0,end_sec= 0,number = 86400,subZo
         df[listDFindex].query(querystr).plot(kind='line',x= 'timeIndex', marker='o',markersize=1,color='blue',ax = ax,
                 figsize=(12,9),ylim=(0,8.2), alpha = 0.5, legend=False)
 
-    plt.yticks( np.arange(9) , ('','North_CHI2AmsMLXe4','North_AMS2ChiMLXe4','North_TPE2ChiMLXe4','North_CHI2TpeMLXe8',
-        'South_CHI2AmsMLXe4','South_AMS2ChiMLXe4','South_TPE2ChiMLXe4','South_CHI2TpeMLXe8'))
+    plt.yticks( np.arange(9) , ('','North_AmsMLXe4_CHI','North_ChiMLXe4_AMS','North_ChiMLXe4_TPE','North_TpeMLXe8_CHI',
+        'South_AmsMLXe4_CHI','South_ChiMLXe4_AMS','South_ChiMLXe4_TPE','South_TpeMLXe8_CHI'))
     plt.xlabel('Date:{0}'.format(filestring))
     plt.title(msg)
 
