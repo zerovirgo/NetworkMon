@@ -1,0 +1,24 @@
+Aug  2 08:22:50 117.103.111.246 SYSTEM: port 2/2 is down( local fault 1)   
+Aug  2 08:22:50 117.103.111.246 SYSTEM: port 2/2 link fault status is cleared(physical link goes down 24)   
+Aug  2 08:48:50 117.103.111.246 SYSTEM: port 2/2 is down( local fault 1)   
+Aug  2 08:48:50 117.103.111.246 SYSTEM: port 2/2 link fault status is cleared(physical link goes down 24)   
+Aug  2 09:50:43 117.103.111.246 SYSTEM: port 2/2 is down( local fault 1)   
+Aug  2 09:50:43 117.103.111.246 SYSTEM: port 2/2 link fault status is cleared(physical link goes down 24)   
+Aug  2 12:11:40 117.103.111.246 SYSTEM: port 2/2 is down( local fault 1)   
+Aug  2 12:11:40 117.103.111.246 SYSTEM: port 2/2 link fault status is cleared(physical link goes down 24)   
+Aug  2 12:45:58 117.103.111.246 SYSTEM: port 2/2 is down( local fault 1)   
+Aug  2 12:45:58 117.103.111.246 SYSTEM: port 2/2 link fault status is cleared(physical link goes down 24)   
+Aug  2 13:07:21 117.103.111.246 SYSTEM: port 2/2 is down( local fault 1)   
+Aug  2 13:17:09 117.103.111.246 System: Interface ethernet 2/2, state up 
+Aug  2 18:45:25 117.103.111.246 System: Interface ethernet 2/2, state down - link down 
+Aug  2 18:45:25 117.103.111.246 System: Interface ethernet 2/2, state up 
+Aug  2 23:01:59 117.103.111.246 System: Interface ethernet 2/2, state down - link down 
+Aug  2 23:02:00 117.103.111.246 System: Interface ethernet 2/2, state up 
+Aug  2 23:17:03 117.103.111.246 System: Interface ethernet 2/2, state down - link down 
+Aug  2 23:17:03 117.103.111.246 System: Interface ethernet 2/2, state up 
+Aug  3 04:27:57 117.103.111.246 System: Interface ethernet 2/2, state down - link down 
+Aug  3 04:27:58 117.103.111.246 System: Interface ethernet 2/2, state up 
+Aug  3 07:16:46 117.103.111.246 System: Interface ethernet 2/2, state down - link down 
+Aug  3 07:16:46 117.103.111.246 System: Interface ethernet 2/2, state up 
+Aug  3 07:29:42 117.103.111.246 System: Interface ethernet 2/2, state down - link down 
+Aug  3 07:29:42 117.103.111.246 System: Interface ethernet 2/2, state up 
