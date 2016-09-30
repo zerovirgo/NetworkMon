@@ -33,4 +33,4 @@ pass=`cat /nfs/home/zero/.ssh/passwd_ui02`
 /usr/bin/expect exe2asgcui.exp $filename11 $filename12 $pass $yesterday
 /usr/bin/expect exe2asgcui.exp $filename13 $filename14 $pass $yesterday
 /usr/bin/expect exe2asgcui.exp $filename15 $filename16 $pass $yesterday
-/usr/bin/expect exe2asgcui.exp $filename17 $filename18 $pass $yesterday
+/usr/bin/expect  exe2asgcui.exp $filename17 $filename18 $pass $yesterday
