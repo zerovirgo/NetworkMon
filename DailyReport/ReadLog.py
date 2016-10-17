@@ -78,5 +78,9 @@ logList = [
 nDay = -1 
 getCSV('CHIflapping_{0}_log'.format(timeModule.getNday(nDay)),'SouthRoute_CHI_TPE_ChiMLXe4.csv','1/11,')
 getCSV('TPEflapping_{0}_log'.format(timeModule.getNday(nDay)),'SouthRoute_TPE_CHI_TpeMLXe8.csv','2/2,')
+getCSV('CHIflapping_{0}_log'.format(timeModule.getNday(nDay)),'SouthRoute_CHI_AMS_ChiMLXe4.csv','1/13,')
+getCSV('AMSflapping_{0}_log'.format(timeModule.getNday(nDay)),'SouthRoute_AMS_CHI_AmsMLXe4.csv','1/11,')
 getCSV('CHIflapping_{0}_log'.format(timeModule.getNday(nDay)),'NorthRoute_CHI_TPE_ChiMLXe4.csv','1/1,')
 getCSV('TPEflapping_{0}_log'.format(timeModule.getNday(nDay)),'NorthRoute_TPE_CHI_TpeMLXe8.csv','1/2,')
+getCSV('CHIflapping_{0}_log'.format(timeModule.getNday(nDay)),'NorthRoute_CHI_AMS_ChiMLXe4.csv','1/3,')
+getCSV('AMSflapping_{0}_log'.format(timeModule.getNday(nDay)),'NorthRoute_AMS_CHI_AmsMLXe4.csv','1/1,')

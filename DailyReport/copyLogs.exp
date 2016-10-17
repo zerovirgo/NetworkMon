@@ -4,16 +4,19 @@ set YEAR [lindex $argv 0]
 set MONTH [lindex $argv 1]
 set DAY [lindex $argv 2]
 set PASS [lindex $argv 3]
-set USERNAME = aaa
-set HOSTNAME = bbb
 
 set timeout 30
-spawn scp -P 85 $USERNAME@$HOSTNAME:/home/LOG/Routers/by_DATE/$YEAR/$MONTH/117.103.111.246-$DAY.log TPEflapping_$YEAR$MONTH${DAY}_log
+spawn scp -P 85 kuanhsin.chen@mail.twgrid.org:/home/LOG/Routers/by_DATE/$YEAR/$MONTH/117.103.111.246-$DAY.log TPEflapping_$YEAR$MONTH${DAY}_log
 expect "*?assword:*"
 send "$PASS\r"
 expect eof
 
-spawn scp -P 85 $USERNAME@$HOSTNAME:/home/LOG/Routers/by_DATE/$YEAR/$MONTH/117.103.111.242-$DAY.log CHIflapping_$YEAR$MONTH${DAY}_log
+spawn scp -P 85 kuanhsin.chen@mail.twgrid.org:/home/LOG/Routers/by_DATE/$YEAR/$MONTH/117.103.111.242-$DAY.log CHIflapping_$YEAR$MONTH${DAY}_log
+expect "*?assword:*"
+send "$PASS\r"
+expect eof
+
+spawn scp -P 85 kuanhsin.chen@mail.twgrid.org:/home/LOG/Routers/by_DATE/$YEAR/$MONTH/117.103.111.241-$DAY.log AMSflapping_$YEAR$MONTH${DAY}_log
 expect "*?assword:*"
 send "$PASS\r"
 expect eof

@@ -180,10 +180,14 @@ def drawDowntimeEvents(bigdf,start_sec,end_sec):
 #'SouthRoute_TPE_CHI_TpeMLXe8.csv'
 #]
 csvlist = [
+'SouthRoute_CHI_TPE_ChiMLXe4.csv' ,
+'SouthRoute_TPE_CHI_TpeMLXe8.csv' ,
+'SouthRoute_CHI_AMS_ChiMLXe4.csv' ,
+'SouthRoute_AMS_CHI_AmsMLXe4.csv' ,
 'NorthRoute_CHI_TPE_ChiMLXe4.csv' ,
 'NorthRoute_TPE_CHI_TpeMLXe8.csv' ,
-'SouthRoute_CHI_TPE_ChiMLXe4.csv' ,
-'SouthRoute_TPE_CHI_TpeMLXe8.csv'
+'NorthRoute_CHI_AMS_ChiMLXe4.csv' ,
+'NorthRoute_AMS_CHI_AmsMLXe4.csv'
 ]
 
 dflist = []
