@@ -56,8 +56,8 @@ def exe2(bigdf,datestr):
 
     bigdf['startdate'] = bigdf['startT_sec'].apply(lambda x:dateparse(x))
     bigdf['enddate'] = bigdf['endT_sec'].apply(lambda x:dateparse(x))
-    bigdf['durationindex'] = bigdf['duration'].apply(lambda x: '0' if x == 0 else '> 1')
-    print bigdf['durationindex'].value_counts().sort_values(ascending=False)
+    bigdf['durationindex'] = bigdf['duration'].apply(lambda x: str(int(x)))
+    #print bigdf['durationindex'].value_counts().sort_values(ascending=False)
     group = pd.groupby(bigdf, [bigdf.route])
     msg = 'Date: {0}\n'.format( datestr )
     for index,item in group.count()['endT'].iteritems():
@@ -84,7 +84,7 @@ def exe2(bigdf,datestr):
     ax.plot_date(x2, y2, color='red',markersize=1)
     ax.set_xlim(datestr2num(datestr),datestr2num(datestr)+1)
     ax.set_ylim([0,8.5])
-    print ax.get_xticklabels()
+    #print ax.get_xticklabels()
     plt.yticks( np.arange(9) , ('','North_AmsMLXe4_CHI','North_ChiMLXe4_AMS','North_ChiMLXe4_TPE','North_TpeMLXe8_CHI',
         'South_AmsMLXe4_CHI','South_ChiMLXe4_AMS','South_ChiMLXe4_TPE','South_TpeMLXe8_CHI'))
     fig.autofmt_xdate()
@@ -114,13 +114,12 @@ def exe2(bigdf,datestr):
     boardax = [None] * 8
     fig, ax = plt.subplots(figsize=(12,9))
     plt.clf()
-    subdf = bigdf[['durationindex','route']]
+    subdf = bigdf[['duration','route']]
     subdf['count'] = 1
-    group1 = subdf.groupby(['durationindex','route']).count().unstack()
+    group1 = subdf.groupby(['duration','route']).count().unstack()
     group1.columns =  group1.columns.droplevel(0)
-    print group1
     i = 0
-    themax = bigdf['durationindex'].value_counts().sort_values(ascending=False).max()
+    themax = bigdf['duration'].value_counts().sort_values(ascending=False).max()
     for item in group1.columns:
         i+=1
         base = 240
@@ -128,11 +127,20 @@ def exe2(bigdf,datestr):
             base = 120
         elif len(group1.columns) <= 4:
             base = 220
-        elif len(group1.columns) <= 4:
+        elif len(group1.columns) <= 8:
             base = 240
         boardax[i-1] = fig.add_subplot(base+i)
         #boardax[i-1] = plt.axes([0.10,0.10,0.78,0.75])
-        group1[item].plot(kind='bar',ax=boardax[i-1],color=['blue','red'])
+        colors = []
+        for ind,it in group1[item].iteritems():
+            if str(ind) == '0.0' and not np.isnan(it):
+                colors.append('red')
+            elif not np.isnan(it):
+                colors.append('blue')
+        #if not 'red' in colors:
+        #    colors = 'blue'
+
+        group1[item].dropna().plot(kind='bar',ax=boardax[i-1],color=colors)
         boardax[i-1].set_xlabel('duration(s)')
         boardax[i-1].set_title(item)
         boardax[i-1].set_ylim(0,themax)
