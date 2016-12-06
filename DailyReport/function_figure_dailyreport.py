@@ -123,7 +123,9 @@ def exe2(bigdf,datestr):
     for item in group1.columns:
         i+=1
         base = 240
-        if len(group1.columns) <= 2:
+        if len(group1.columns) == 1:
+            base = 110
+        elif len(group1.columns) <= 2:
             base = 120
         elif len(group1.columns) <= 4:
             base = 220
@@ -134,9 +136,9 @@ def exe2(bigdf,datestr):
         colors = []
         for ind,it in group1[item].iteritems():
             if str(ind) == '0.0' and not np.isnan(it):
-                colors.append('red')
-            elif not np.isnan(it):
                 colors.append('blue')
+            elif not np.isnan(it):
+                colors.append('red')
         #if not 'red' in colors:
         #    colors = 'blue'
 
