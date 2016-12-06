@@ -103,16 +103,23 @@ def draw2(powerdf,bigdf,route,start_sec = -1,end_sec = -1):
             'SouthRoute_CHI_TPE_ChiMLXe4' : 'South_ChiMLXe4',
             'SouthRoute_TPE_CHI_TpeMLXe8' : 'South_TpeMLXe8'
             }
-    for index,row in subdf.iterrows():
+    for index,row in subdf.query('duration==0.0').iterrows():
         start = mdates.date2num(datetime.datetime.fromtimestamp(row['startT_sec']))
         end = mdates.date2num(datetime.datetime.fromtimestamp(row['endT_sec']))
         rect =  patches.Rectangle((start,rec_bottom), width=(end-start), height=rec_height+20,
-                color='orange', alpha=0.5)
+                color='cyan', alpha=0.9)
         host.add_patch(rect)
-    orange_patch = mpatches.Patch(color='orange', label='Flapping time')
+    for index,row in subdf.query('duration!=0.0').iterrows():
+        start = mdates.date2num(datetime.datetime.fromtimestamp(row['startT_sec']))
+        end = mdates.date2num(datetime.datetime.fromtimestamp(row['endT_sec']))
+        rect =  patches.Rectangle((start,rec_bottom), width=(end-start), height=rec_height+20,
+                color='orange', alpha=0.9)
+        host.add_patch(rect)
+    cyan_patch = mpatches.Patch(color='cyan', label='Flapping time(0)')
+    orange_patch = mpatches.Patch(color='orange', label='Flapping time(>0)')
     blueline = mlines.Line2D([], [], color='blue', label='Tx')
     redline = mlines.Line2D([], [], color='red', label='Rx')
-    plt.legend(handles=[orange_patch,blueline,redline])
+    plt.legend(handles=[cyan_patch,orange_patch,blueline,redline])
     
     plt.ylabel('dBm')
     plt.xlabel('Date:{0}{1:0>2d}{2:0>2d}'.format(startdate.year,startdate.month,startdate.day))
