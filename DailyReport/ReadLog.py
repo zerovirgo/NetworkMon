@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
-"""
+'''
 Created on Mon Jul 18 00:06:17 2016
 
 @author: kschen
-"""
+'''
 import time
 import timeModule
 
@@ -35,7 +35,7 @@ def getCSV(filename,outputName,port):
         line = line.strip()
         #print line
         timeLine = line[:15]
-        timeLine = '2016 ' + timeLine
+        timeLine = '2017 ' + timeLine
         # start from down event
         if 'state down' in line:
             flag = True
