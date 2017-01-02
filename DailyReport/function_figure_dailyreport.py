@@ -297,8 +297,8 @@ def getDays(seconds):
     import datetime
     MM = time.gmtime(seconds)[1]
     DD = time.gmtime(seconds)[2]
-    print (datetime.datetime(2016,MM,DD)-datetime.datetime(2016,1,1)).days
-    return (datetime.datetime(2016,MM,DD)-datetime.datetime(2016,1,1)).days
+    print (datetime.datetime(2017,MM,DD)-datetime.datetime(2017,1,1)).days
+    return (datetime.datetime(2017,MM,DD)-datetime.datetime(2017,1,1)).days
     
 def drawDowntimeEventsToday(bigdf):
     yesterday = time.mktime(time.strptime(timeModule.getYesterday(),'%Y%m%d'))
@@ -318,7 +318,7 @@ def drawDowntimeEvents(bigdf,start_sec,end_sec):
     SouthRoute_CHI_AMS_ChiMLXe4 = np.zeros(number)
     SouthRoute_CHI_TPE_ChiMLXe4 = np.zeros(number)
     SouthRoute_TPE_CHI_TpeMLXe8 = np.zeros(number)
-    ser = pd.date_range('1/1/2016' ,periods = 365, freq='D')
+    ser = pd.date_range('1/1/2017' ,periods = 365, freq='D')
     serNum = ser.astype(np.int64) // 10**9
     print ser[rTest], type(ser[rTest]), serNum[rTest],'{0}{1:0>2d}{2:0>2d}'.format( ser[rTest].year , ser[rTest].month , ser[rTest].day)
     df = pd.DataFrame({'timeser':tIndex,
