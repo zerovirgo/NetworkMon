@@ -1,0 +1,16 @@
+#!/usr/bin/expect -f
+
+set NAME1 [lindex $argv 0]
+set NAME2 [lindex $argv 1]
+set PASS [lindex $argv 2]
+
+set timeout 30
+spawn scp -P 85 kuanhsin.chen@mail.twgrid.org:/tmp/south_route_TPEflapping_daily_log $NAME1
+expect "*?assword:*"
+send "$PASS\r"
+interact
+spawn scp -P 85 kuanhsin.chen@mail.twgrid.org:/tmp/south_route_CHIflapping_daily_log $NAME2
+set password [lrange $argv 0 0]
+expect "*?assword:*"
+send "$PASS\r"
+interact

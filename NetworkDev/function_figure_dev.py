@@ -80,11 +80,11 @@ def drawDownTimeStatDay(filename,limit = False):
         ax = df['duration'].plot(kind='bar',alpha=0.7,figsize=(12,7),ylim=(0,3600))
     else:
         ax = df['duration'].plot(kind='bar',alpha=0.7,figsize=(12,7))
-    if len(df > 100):
-        ticks = ax.xaxis.get_ticklocs()
-        ticklabels = [l.get_text() for l in ax.xaxis.get_ticklabels()]
-        ax.xaxis.set_ticks(ticks[::n])
-        ax.xaxis.set_ticklabels(ticklabels[::n])
+    #if len(df > 100):
+    #    ticks = ax.xaxis.get_ticklocs()
+    #    ticklabels = [l.get_text() for l in ax.xaxis.get_ticklabels()]
+    #    ax.xaxis.set_ticks(ticks[::n])
+    #    ax.xaxis.set_ticklabels(ticklabels[::n])
     ax.set_title(title)
     ax.set_xlabel('Date')
     ax.set_ylabel('Average flapping duration/day(sec)')
@@ -121,12 +121,13 @@ def drawDownTimeStatDay(filename,limit = False):
     print df.describe()
     outname = filename.split('.')[0]+'_count_flp_day'+'.png'
     ax = plt.axes([0.15,0.25,0.8,0.65])
-    ax = df['count'].plot(kind='bar',alpha=0.7,figsize=(12,7))
-    if len(df > 100):
-        ticks = ax.xaxis.get_ticklocs()
-        ticklabels = [l.get_text() for l in ax.xaxis.get_ticklabels()]
-        ax.xaxis.set_ticks(ticks[::n])
-        ax.xaxis.set_ticklabels(ticklabels[::n])
+    ax = df['count'].plot(kind='bar',alpha=0.7,figsize=(16,7))
+    # skip information
+    #if len(df > 100):
+    #    ticks = ax.xaxis.get_ticklocs()
+    #    ticklabels = [l.get_text() for l in ax.xaxis.get_ticklabels()]
+    #    ax.xaxis.set_ticks(ticks[::n])
+    #    ax.xaxis.set_ticklabels(ticklabels[::n])
     ax.set_title(title)
     ax.set_xlabel('Date')
     ax.set_ylabel('counts')
@@ -241,11 +242,11 @@ drawDownTimeVSInterval(myname)
 drawDownTimeStatDay(myname)
 #drawDownTimeStatWeek(myname)
 
-myname = 'SouthRoute_TPE_CHI_TpeMLXe4.csv'
+myname = 'SouthRoute_TPE_CHI_TpeMLXe8.csv'
 drawDownTimeVSInterval(myname)
 drawDownTimeStatDay(myname)
 #drawDownTimeStatWeek(myname)
-compareCount()
+#compareCount()
 
     #rect_scatter =
     #ax = df.plot(kind = 'scatter',x= 'duration', y = 'interval',xlim=(-10,1000),ylim=(-10,1000),figsize=(12,9))

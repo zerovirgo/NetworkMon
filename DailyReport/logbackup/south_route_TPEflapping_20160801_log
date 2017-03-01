@@ -1,0 +1,52 @@
+Aug  1 08:06:19 117.103.111.246 System: Interface ethernet 2/2, state down - link down 
+Aug  1 08:06:20 117.103.111.246 System: Interface ethernet 2/2, state up 
+Aug  1 08:15:58 117.103.111.246 System: Interface ethernet 2/2, state down - link down 
+Aug  1 08:15:58 117.103.111.246 System: Interface ethernet 2/2, state up 
+Aug  1 10:45:03 117.103.111.246 System: Interface ethernet 2/2, state down - link down 
+Aug  1 10:45:03 117.103.111.246 System: Interface ethernet 2/2, state up 
+Aug  1 16:15:56 117.103.111.246 System: Interface ethernet 2/2, state down - link down 
+Aug  1 16:15:56 117.103.111.246 System: Interface ethernet 2/2, state up 
+Aug  1 18:03:14 117.103.111.246 System: Interface ethernet 2/2, state down - link down 
+Aug  1 18:03:15 117.103.111.246 System: Interface ethernet 2/2, state up 
+Aug  1 18:29:28 117.103.111.246 System: Interface ethernet 2/2, state down - link down 
+Aug  1 18:29:29 117.103.111.246 System: Interface ethernet 2/2, state up 
+Aug  1 20:37:58 117.103.111.246 System: Interface ethernet 2/2, state down - link down 
+Aug  1 20:37:58 117.103.111.246 System: Interface ethernet 2/2, state up 
+Aug  1 21:50:52 117.103.111.246 System: Interface ethernet 2/2, state down - link down 
+Aug  1 21:50:52 117.103.111.246 System: Interface ethernet 2/2, state up 
+Aug  1 21:53:24 117.103.111.246 System: Interface ethernet 2/2, state down - link down 
+Aug  1 21:53:25 117.103.111.246 System: Interface ethernet 2/2, state up 
+Aug  1 22:58:22 117.103.111.246 System: Interface ethernet 2/2, state down - link down 
+Aug  1 22:58:22 117.103.111.246 System: Interface ethernet 2/2, state up 
+Aug  1 23:19:39 117.103.111.246 System: Interface ethernet 2/2, state down - link down 
+Aug  1 23:19:40 117.103.111.246 System: Interface ethernet 2/2, state up 
+Aug  1 23:23:36 117.103.111.246 System: Interface ethernet 2/2, state down - link down 
+Aug  1 23:23:37 117.103.111.246 System: Interface ethernet 2/2, state up 
+Aug  2 00:01:41 117.103.111.246 System: Interface ethernet 2/2, state down - link down 
+Aug  2 00:01:41 117.103.111.246 System: Interface ethernet 2/2, state up 
+Aug  2 03:11:55 117.103.111.246 System: Interface ethernet 2/2, state down - link down 
+Aug  2 03:12:40 117.103.111.246 System: Interface ethernet 2/2, state up 
+Aug  2 03:12:44 117.103.111.246 SYSTEM: port 2/2 is down( local fault 1)   
+Aug  2 03:12:44 117.103.111.246 System: Interface ethernet 2/2, state down - local fault 
+Aug  2 03:21:48 117.103.111.246 SYSTEM: port 2/2 is down( local fault 1)   
+Aug  2 03:21:49 117.103.111.246 SYSTEM: port 2/2 link fault status is cleared(physical link goes down 24)   
+Aug  2 03:25:18 117.103.111.246 SYSTEM: port 2/2 is down( local fault 1)   
+Aug  2 03:25:18 117.103.111.246 SYSTEM: port 2/2 link fault status is cleared(physical link goes down 24)   
+Aug  2 04:17:15 117.103.111.246 SYSTEM: port 2/2 is down( local fault 1)   
+Aug  2 04:17:15 117.103.111.246 SYSTEM: port 2/2 link fault status is cleared(physical link goes down 24)   
+Aug  2 04:38:16 117.103.111.246 SYSTEM: port 2/2 is down( local fault 1)   
+Aug  2 04:38:16 117.103.111.246 SYSTEM: port 2/2 link fault status is cleared(physical link goes down 24)   
+Aug  2 06:28:59 117.103.111.246 SYSTEM: port 2/2 is down( local fault 1)   
+Aug  2 06:28:59 117.103.111.246 SYSTEM: port 2/2 link fault status is cleared(physical link goes down 24)   
+Aug  2 06:33:05 117.103.111.246 SYSTEM: port 2/2 is down( local fault 1)   
+Aug  2 06:33:05 117.103.111.246 SYSTEM: port 2/2 link fault status is cleared(physical link goes down 24)   
+Aug  2 06:43:12 117.103.111.246 SYSTEM: port 2/2 is down( local fault 1)   
+Aug  2 06:43:12 117.103.111.246 SYSTEM: port 2/2 link fault status is cleared(physical link goes down 24)   
+Aug  2 07:02:13 117.103.111.246 SYSTEM: port 2/2 is down( local fault 1)   
+Aug  2 07:02:13 117.103.111.246 SYSTEM: port 2/2 link fault status is cleared(physical link goes down 24)   
+Aug  2 07:44:49 117.103.111.246 SYSTEM: port 2/2 is down( local fault 1)   
+Aug  2 07:44:49 117.103.111.246 SYSTEM: port 2/2 link fault status is cleared(physical link goes down 24)   
+Aug  2 07:46:19 117.103.111.246 SYSTEM: port 2/2 is down( local fault 1)   
+Aug  2 07:46:19 117.103.111.246 SYSTEM: port 2/2 link fault status is cleared(physical link goes down 24)   
+Aug  2 07:57:48 117.103.111.246 SYSTEM: port 2/2 is down( local fault 1)   
+Aug  2 07:57:48 117.103.111.246 SYSTEM: port 2/2 link fault status is cleared(physical link goes down 24)   

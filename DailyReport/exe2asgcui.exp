@@ -1,0 +1,22 @@
+#!/usr/bin/expect -f
+
+set NAME1 [lindex $argv 0]
+set NAME2 [lindex $argv 1]
+set PASS [lindex $argv 2]
+set DATE [lindex $argv 3]
+
+set timeout 35
+spawn ssh kschen@asgc-ui02.grid.sinica.edu.tw "mkdir -p /asgc_ui_home/kschen/work/DailyFlappingReport/$DATE"
+expect "*?assword:*"
+send "$PASS\r"
+expect eof
+
+spawn scp $NAME1 $NAME2  kschen@asgc-ui02.grid.sinica.edu.tw:/asgc_ui_home/kschen/work/DailyFlappingReport/$DATE
+expect "*?assword:*"
+send "$PASS\r"
+expect eof
+
+spawn ssh -t kschen@asgc-ui02.grid.sinica.edu.tw "bash /asgc_ui_home/kschen/work/DailyFlappingReport/execopy.sh"
+expect "*?assword:*"
+send "$PASS\r"
+expect eof
